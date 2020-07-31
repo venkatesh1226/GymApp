@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="30dp"
+    app:cardElevation="30dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    <TextView
+        android:id="@+id/enterDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter details"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        android:layout_margin="5dp"
+        />
+        <TextView
+            android:id="@+id/question"
+            android:layout_below="@+id/enterDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold|italic"
+            android:text="Are You Sure You Want To Add "
+            android:textColor="@color/cardview_dark_background"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+
+             />
+    <RelativeLayout
+        android:id="@+id/relMinutes"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/question"
+        android:layout_margin="5dp"
+
+        >
+        <TextView
+            android:id="@+id/txtMinutes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter No Of Minutes In Mind"
+            android:textColor="@color/cardview_dark_background"
+            android:layout_centerVertical="true"
+
+
+            android:textStyle="italic"/>
+
+        <EditText
+            android:id="@+id/etMinutes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@+id/txtMinutes"
+            android:hint="Minutes"
+            android:inputType="number" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/relDay"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/relMinutes"
+        android:layout_margin="5dp">
+        <TextView
+            android:id="@+id/txtDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Day You Want To Perform :"
+            android:textStyle="italic"
+            android:textColor="@color/cardview_dark_background"
+            android:layout_centerVertical="true"/>
+      <Spinner
+          android:id="@+id/spinnerDay"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+         android:layout_toRightOf="@+id/txtDay"
+          android:entries="@array/Days"
+          />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relDay"
+        android:layout_margin="5dp"
+        android:layout_centerHorizontal="true">
+        <Button
+            android:id="@+id/btnDismiss"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Dismiss"/>
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Add"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/btnDismiss"/>
+    </RelativeLayout>
+    </RelativeLayout>>
+</androidx.cardview.widget.CardView>
